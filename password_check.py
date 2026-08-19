@@ -1,9 +1,9 @@
 password = input("Enter your password: ")
-if len(password) < 14:
-    print("Password is too short. It must be at least 14 characters long. ")
-elif len(password) < 14:
-    print("WARNING : Password does not meet minimum length(14+)")
-elif password.lower() == password:
-    print("WARNING : Password must contain uppercase letters.")
-else:
-    print("OK: Password meets basic checks.")
+
+while len(password) < 14 or password.lower() == password:
+    if len(password) < 14:
+        print("Password is too short. It must be at least 14 characters long. ")
+    elif password.lower() == password:
+        print("Password must contain uppercase letters.")
+    password = input("Try again: ")
+print("OK: Password meets basic checks.")
